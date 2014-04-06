@@ -11,7 +11,7 @@ pubnub = Pubnub.new(
 
 
 get "/computer/on" do
-  pubnub.publish(channel: 'home', message: '{"object": "computer", "action": "on"') do |data|
+  pubnub.publish(channel: 'home', message: '{"object": "computer", "action": "on"}') do |data|
     puts data.response
   end
 end
